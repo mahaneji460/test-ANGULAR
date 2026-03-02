@@ -1,0 +1,12 @@
+<div class="container mt-4" *ngIf="suggestion">
+  <h2 class="h5 mb-3">Détails de la suggestion</h2>
+
+  <div class="border rounded p-3">
+    <p class="mb-1"><strong>Titre :</strong> {{ suggestion.title }}</p>
+    <p class="mb-1"><strong>Description :</strong> {{ suggestion.description }}</p>
+    <p class="mb-1"><strong>Catégorie :</strong> {{ suggestion.category }}</p>
+    <p class="mb-1"><strong>Date :</strong> {{ suggestion.date | date:'medium' }}</p>
+    <p class="mb-1"><strong>Status :</strong> {{ suggestion.status }}</p>
+    <p class="mb-0"><strong>Likes :</strong> {{ suggestion.nbLikes }}</p>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="container mt-4" *ngIf="!loading && residence; else loadingTpl">
+  <h2 class="h5 mb-3">Détails de la résidence</h2>
+
+  <div class="border rounded p-3">
+    <h3 class="h6 mb-3">{{ residence.name }}</h3>
+    <p class="mb-1"><strong>Adresse :</strong> {{ residence.address }}</p>
+    <p class="mb-1"><strong>Status :</strong> {{ residence.status }}</p>
+    <p class="mb-1" *ngIf="residence.created_at">
+      <strong>Créée le :</strong>
+      {{ residence.created_at | date:'short' }}
+    </p>
+    <p class="mb-0" *ngIf="residence.updated_at">
+      <strong>Dernière mise à jour :</strong>
+      {{ residence.updated_at | date:'short' }}
+    </p>
+  </div>
+
+  <button class="btn btn-outline-secondary btn-sm mt-3" (click)="backToList()">
+    Retour à la liste
+  </button>
+</div>
+
+<ng-template #loadingTpl>
+  <div class="container mt-4">
+    <p *ngIf="!error" class="text-muted">Chargement...</p>
+    <p *ngIf="error" class="text-danger">{{ error }}</p>
+  </div>
+</ng-template>

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "med_amine_hamrouni": {
+    "maha_neji": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/med_amine_hamrouni",
+            "outputPath": "dist/maha_neji",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "med_amine_hamrouni:build:production"
+              "buildTarget": "maha_neji:build:production"
             },
             "development": {
-              "buildTarget": "med_amine_hamrouni:build:development"
+              "buildTarget": "maha_neji:build:development"
             }
           },
           "defaultConfiguration": "development"
